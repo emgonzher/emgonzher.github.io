@@ -1,0 +1,233 @@
+[
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "My research focuses on flows through collapsible channels: problems in which a fluid interacts nonlinearly with an elastic solid. I am mainly interested in the numerical modelling of these systems, aiming to capture their dynamical behaviour, study the effect of system parameters, and characterise the physical phenomena that emerge.\n\n\nDynamical Anlysis of Collapsible Channels with Hyperelastic Walls (2026)\nSupervisors: Prof. Alfonso Miguel Gañán Calvo, Prof. Miguel Ángel Herrada Gutierrez — University of Sevilla\nAbstract: We present a numerical study of collapsible channels with different geometries. We analyse and characterise families of steady solutions and investigate their linear stability under variations in physical parameters. The computations are carried out using JaM, a numerical framework based on the use of analytical Jacobians and sparse collocation matrices, which allows the modelling of fluid–solid interaction problems under large deformations.\nDownload PDF Browse HTML version\n\n\n\n\n\n\nNoteComing soon (hopefully)\n\n\n\nInteractive HTML version built with Quarto — providing browsable chapters with embedded figures and code."
+  },
+  {
+    "objectID": "research.html#research-interests",
+    "href": "research.html#research-interests",
+    "title": "Research",
+    "section": "",
+    "text": "My research focuses on flows through collapsible channels: problems in which a fluid interacts nonlinearly with an elastic solid. I am mainly interested in the numerical modelling of these systems, aiming to capture their dynamical behaviour, study the effect of system parameters, and characterise the physical phenomena that emerge.\n\n\nDynamical Anlysis of Collapsible Channels with Hyperelastic Walls (2026)\nSupervisors: Prof. Alfonso Miguel Gañán Calvo, Prof. Miguel Ángel Herrada Gutierrez — University of Sevilla\nAbstract: We present a numerical study of collapsible channels with different geometries. We analyse and characterise families of steady solutions and investigate their linear stability under variations in physical parameters. The computations are carried out using JaM, a numerical framework based on the use of analytical Jacobians and sparse collocation matrices, which allows the modelling of fluid–solid interaction problems under large deformations.\nDownload PDF Browse HTML version\n\n\n\n\n\n\nNoteComing soon (hopefully)\n\n\n\nInteractive HTML version built with Quarto — providing browsable chapters with embedded figures and code."
+  },
+  {
+    "objectID": "research.html#publications",
+    "href": "research.html#publications",
+    "title": "Research",
+    "section": "Publications",
+    "text": "Publications\n\nJournal articles\n\nE. G. Herrer, M. A. Herrada., A. M. Gañán-Calvo, P. S. Stewart. Stability of finite-length collapsible channel flow to spanwise perturbations. Physic of Fluids, 36, 124105 (2024).\n[PDF] [DOI]"
+  },
+  {
+    "objectID": "research.html#talks-presentations",
+    "href": "research.html#talks-presentations",
+    "title": "Research",
+    "section": "Talks & Presentations",
+    "text": "Talks & Presentations\n\n\n\nDate\nEvent\nTitle\nMaterials\n\n\n\n\nNov 2025\nInformal Applied, University of Manchester\nWrinkles to Drapes in Elastic Discs\nSlides\n\n\nNov 2024\nEuro Mech, University of Aachen\nStability of a finite-length collapsible channel flow to spanwise perturbations\nPoster\n\n\nJul 2024\nSeminar, IIT-Bombay\nAdvances in Smart Air Sensing & Emerging Control Technologies\nSlides"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Year\nCourse\nRole\nMaterials\n\n\n\n\n2025–26\nFluid Mechanics II\nTA, Lab instructor\nProblem sets\n\n\n2024–25\nNumerical Methods for Engineers\nTA\nJulia tutorials\n\n\n2023–24\nIntroduction to CFD\nLab instructor\nOpenFOAM guides"
+  },
+  {
+    "objectID": "teaching.html#teaching-experience",
+    "href": "teaching.html#teaching-experience",
+    "title": "Teaching",
+    "section": "",
+    "text": "Year\nCourse\nRole\nMaterials\n\n\n\n\n2025–26\nFluid Mechanics II\nTA, Lab instructor\nProblem sets\n\n\n2024–25\nNumerical Methods for Engineers\nTA\nJulia tutorials\n\n\n2023–24\nIntroduction to CFD\nLab instructor\nOpenFOAM guides"
+  },
+  {
+    "objectID": "teaching.html#student-supervision",
+    "href": "teaching.html#student-supervision",
+    "title": "Teaching",
+    "section": "Student supervision",
+    "text": "Student supervision\n\nStudent Name (MSc, 2025): Thesis title\nStudent Name (BSc, 2024): Project title"
+  },
+  {
+    "objectID": "teaching.html#teaching-materials",
+    "href": "teaching.html#teaching-materials",
+    "title": "Teaching",
+    "section": "Teaching materials",
+    "text": "Teaching materials\n\n\n\n\n\n\nTipOpen-source teaching\n\n\n\nI believe in making teaching materials freely available. All resources below are shared under a CC-BY license.\n\n\n\nJulia for Scientific Computing — Tutorial series\nA set of introductory notebooks for engineering students transitioning to Julia:\n\nBasics: Arrays, loops, and functions\nLinear algebra and sparse systems\nODE solvers with DifferentialEquations.jl\nPlotting with CairoMakie\n\n\n\nMATLAB quick references\n\nFFT and spectral methods cheat sheet\nPost-processing DNS data"
+  },
+  {
+    "objectID": "code.html",
+    "href": "code.html",
+    "title": "Code",
+    "section": "",
+    "text": "[Section under construction…]\nI am interested about writing robust, well-documented, and reproducible scientific code. My public repositories are hosted on my GitHub page.\nI believe research codes should be open-source, reproducible, and freely available to the scientific community."
+  },
+  {
+    "objectID": "code.html#solvers-libraries",
+    "href": "code.html#solvers-libraries",
+    "title": "Code",
+    "section": "Solvers & Libraries",
+    "text": "Solvers & Libraries\n\nCollapsible channels & tubes\n\n\n\n\n\n\nNoteComing soon (hopefully)\n\n\n\nAcces to updated git-hub repository with examples and tutorials\n\n\n\n\nSolid Mechanics\n\n\n\n\n\n\nNoteComing soon (hopefully)\n\n\n\nAcces to updated git-hub repository with examples and tutorials"
+  },
+  {
+    "objectID": "code/spectral-analysis.html",
+    "href": "code/spectral-analysis.html",
+    "title": "Spectral Analysis of Turbulence",
+    "section": "",
+    "text": "In turbulent flows, the energy spectrum E(k) describes how kinetic energy is distributed across different length scales. For homogeneous isotropic turbulence, Kolmogorov’s theory predicts a k^{-5/3} scaling in the inertial subrange:\n\nE(k) = C_K \\varepsilon^{2/3} k^{-5/3}\n\nwhere C_K \\approx 1.5 is the Kolmogorov constant, \\varepsilon is the dissipation rate, and k is the wavenumber."
+  },
+  {
+    "objectID": "code/spectral-analysis.html#introduction",
+    "href": "code/spectral-analysis.html#introduction",
+    "title": "Spectral Analysis of Turbulence",
+    "section": "",
+    "text": "In turbulent flows, the energy spectrum E(k) describes how kinetic energy is distributed across different length scales. For homogeneous isotropic turbulence, Kolmogorov’s theory predicts a k^{-5/3} scaling in the inertial subrange:\n\nE(k) = C_K \\varepsilon^{2/3} k^{-5/3}\n\nwhere C_K \\approx 1.5 is the Kolmogorov constant, \\varepsilon is the dissipation rate, and k is the wavenumber."
+  },
+  {
+    "objectID": "code/spectral-analysis.html#matlab-implementation",
+    "href": "code/spectral-analysis.html#matlab-implementation",
+    "title": "Spectral Analysis of Turbulence",
+    "section": "MATLAB Implementation",
+    "text": "MATLAB Implementation\n\n\n\n\n\n\nNote\n\n\n\nMATLAB code is shown with syntax highlighting. Figures are pre-rendered from MATLAB and included as images. The full scripts are available in the GitHub repository.\n\n\n\nLoading and preprocessing DNS data\n%% Load DNS velocity field\n% Data from a 256^3 simulation at Re_lambda = 100\nload('dns_velocity_field.mat', 'u', 'v', 'w', 'Lx', 'Ly', 'Lz')\n\n[Nx, Ny, Nz] = size(u);\ndx = Lx / Nx;\n\nfprintf('Grid: %d x %d x %d\\n', Nx, Ny, Nz)\nfprintf('Domain: %.2f x %.2f x %.2f\\n', Lx, Ly, Lz)\nfprintf('Resolution: dx = %.4f\\n', dx)\n\n\nComputing the 3D energy spectrum\n%% Compute 3D energy spectrum using FFT\n% Fourier transform of velocity components\nu_hat = fftn(u) / (Nx * Ny * Nz);\nv_hat = fftn(v) / (Nx * Ny * Nz);\nw_hat = fftn(w) / (Nx * Ny * Nz);\n\n% Energy in Fourier space\nE_hat = 0.5 * (abs(u_hat).^2 + abs(v_hat).^2 + abs(w_hat).^2);\n\n% Wavenumber grid\nkx = [0:Nx/2-1, -Nx/2:-1] * (2*pi/Lx);\nky = [0:Ny/2-1, -Ny/2:-1] * (2*pi/Ly);\nkz = [0:Nz/2-1, -Nz/2:-1] * (2*pi/Lz);\n[KX, KY, KZ] = meshgrid(kx, ky, kz);\nK_mag = sqrt(KX.^2 + KY.^2 + KZ.^2);\n\n% Shell-averaged spectrum\nk_max = floor(Nx/2);\nk_shells = 1:k_max;\nE_k = zeros(size(k_shells));\n\nfor i = 1:length(k_shells)\n    shell = (K_mag &gt;= k_shells(i) - 0.5) & (K_mag &lt; k_shells(i) + 0.5);\n    E_k(i) = sum(E_hat(shell), 'all');\nend\n\n\nResult\nThe computed energy spectrum shows excellent agreement with the k^{-5/3} scaling in the inertial subrange:\n\n\n\n\n\n\n\n\n\nTipPlaceholder\n\n\n\nReplace the image path above with your actual MATLAB figure. Export from MATLAB with:\nexportgraphics(gcf, 'images/energy_spectrum.png', 'Resolution', 300)\n\n\n\n\nCompensated spectrum\nTo better identify the inertial range, we plot the compensated spectrum E(k) \\cdot k^{5/3} \\cdot \\varepsilon^{-2/3}:\n%% Compensated spectrum\nepsilon = 2 * nu * sum(k_shells.^2 .* E_k);  % dissipation rate\nE_compensated = E_k .* k_shells.^(5/3) .* epsilon^(-2/3);\n\nfigure('Position', [100 100 600 400])\nsemilogx(k_shells, E_compensated, 'b-', 'LineWidth', 1.5)\nhold on\nyline(1.5, 'r--', 'C_K = 1.5', 'LineWidth', 1.2)\nxlabel('k')\nylabel('E(k) k^{5/3} \\epsilon^{-2/3}')\ntitle('Compensated Energy Spectrum')\ngrid on\nset(gca, 'FontSize', 12)\nexportgraphics(gcf, 'images/compensated_spectrum.png', 'Resolution', 300)"
+  },
+  {
+    "objectID": "code/spectral-analysis.html#key-findings",
+    "href": "code/spectral-analysis.html#key-findings",
+    "title": "Spectral Analysis of Turbulence",
+    "section": "Key findings",
+    "text": "Key findings\nThe analysis confirms:\n\nThe k^{-5/3} scaling spans approximately one decade in wavenumber space (10 \\leq k \\leq 100)\nThe Kolmogorov constant C_K \\approx 1.52, consistent with literature values\nThe dissipation range onset occurs at k\\eta \\approx 0.1, where \\eta is the Kolmogorov length scale"
+  },
+  {
+    "objectID": "code/spectral-analysis.html#references",
+    "href": "code/spectral-analysis.html#references",
+    "title": "Spectral Analysis of Turbulence",
+    "section": "References",
+    "text": "References\n\nPope, S. B. (2000). Turbulent Flows. Cambridge University Press.\nIshihara, T., Gotoh, T., & Kaneda, Y. (2009). Study of high-Reynolds number isotropic turbulence by direct numerical simulation. Annual Review of Fluid Mechanics, 41, 165–180."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Emiliano G. Herrer",
+    "section": "",
+    "text": "I am a PhD candidate (currently finishing!) in Fluid Mechanics at University of Sevilla, working on computational fluid dynamics (CFD) with applications in fluid-solid interaction problems.\nMore specifically, my research focus on the numerical modelling of flows through collapsible channels, using different software as Matlab, Julia and C++ to perform different kind of simulations. Check my code section to take a look to some examples of what I do!\nI am passionate about open-source scientific computing, reproducible research, and making CFD tools accessible to the community.\nInterests: CFD, Flud Mechanics, Elasticity, Scientific Computing\nContact: emiherrer@gmail.com"
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Emiliano G. Herrer",
+    "section": "",
+    "text": "I am a PhD candidate (currently finishing!) in Fluid Mechanics at University of Sevilla, working on computational fluid dynamics (CFD) with applications in fluid-solid interaction problems.\nMore specifically, my research focus on the numerical modelling of flows through collapsible channels, using different software as Matlab, Julia and C++ to perform different kind of simulations. Check my code section to take a look to some examples of what I do!\nI am passionate about open-source scientific computing, reproducible research, and making CFD tools accessible to the community.\nInterests: CFD, Flud Mechanics, Elasticity, Scientific Computing\nContact: emiherrer@gmail.com"
+  },
+  {
+    "objectID": "code/lid-driven-cavity.html",
+    "href": "code/lid-driven-cavity.html",
+    "title": "Lid-Driven Cavity Benchmark",
+    "section": "",
+    "text": "The lid-driven cavity is a classic benchmark problem in computational fluid dynamics. We solve the incompressible Navier-Stokes equations in a square domain \\Omega = [0,1]^2 with the top wall moving at velocity u = 1 and all other walls stationary (no-slip).\nThe governing equations are:\n\n\\frac{\\partial \\mathbf{u}}{\\partial t} + (\\mathbf{u} \\cdot \\nabla)\\mathbf{u} = -\\nabla p + \\frac{1}{Re}\\nabla^2\\mathbf{u}\n\n\n\\nabla \\cdot \\mathbf{u} = 0"
+  },
+  {
+    "objectID": "code/lid-driven-cavity.html#introduction",
+    "href": "code/lid-driven-cavity.html#introduction",
+    "title": "Lid-Driven Cavity Benchmark",
+    "section": "",
+    "text": "The lid-driven cavity is a classic benchmark problem in computational fluid dynamics. We solve the incompressible Navier-Stokes equations in a square domain \\Omega = [0,1]^2 with the top wall moving at velocity u = 1 and all other walls stationary (no-slip).\nThe governing equations are:\n\n\\frac{\\partial \\mathbf{u}}{\\partial t} + (\\mathbf{u} \\cdot \\nabla)\\mathbf{u} = -\\nabla p + \\frac{1}{Re}\\nabla^2\\mathbf{u}\n\n\n\\nabla \\cdot \\mathbf{u} = 0"
+  },
+  {
+    "objectID": "code/lid-driven-cavity.html#setup",
+    "href": "code/lid-driven-cavity.html#setup",
+    "title": "Lid-Driven Cavity Benchmark",
+    "section": "Setup",
+    "text": "Setup\n\n# If you use your own solver, import it here\n# using MyNSSolver\n\n# For this example, we'll use standard Julia packages\nusing LinearAlgebra\nusing Printf\n\n# Simulation parameters\nRe_values = [100, 400, 1000]\nN = 128  # Grid points per direction\n\n128"
+  },
+  {
+    "objectID": "code/lid-driven-cavity.html#results",
+    "href": "code/lid-driven-cavity.html#results",
+    "title": "Lid-Driven Cavity Benchmark",
+    "section": "Results",
+    "text": "Results\n\nVelocity profiles at Re = 100\nThe vertical velocity component v along the horizontal centreline, and the horizontal velocity component u along the vertical centreline, are compared against the reference data from Ghia et al. (1982).\n\nCode\n# ── Example: replace this with your actual simulation results ──\n# Here we generate placeholder data to show the structure\n\n# Reference data from Ghia et al. (1982) - u along vertical centreline at Re=100\nghia_y = [0.0, 0.0547, 0.0625, 0.0703, 0.1016, 0.1719, 0.2813, \n          0.4531, 0.5, 0.6172, 0.7344, 0.8516, 0.9531, 0.9609, \n          0.9688, 0.9766, 1.0]\nghia_u = [0.0, -0.03717, -0.04192, -0.04775, -0.06434, -0.10150, \n          -0.15662, -0.21090, -0.20581, -0.13641, 0.00332, 0.23151, \n          0.68717, 0.73722, 0.78871, 0.84123, 1.0]\n\n# Your simulation results would go here:\n# sim_y, sim_u = solve_cavity(Re=100, N=128)\n\n# For demonstration, we just print the reference data\nprintln(\"Ghia et al. (1982) reference data loaded successfully\")\nprintln(\"Number of reference points: $(length(ghia_y))\")\n\n# ── When you have plotting packages: ──\n# using CairoMakie\n# fig = Figure(size=(500, 400))\n# ax = Axis(fig[1,1], xlabel=\"u\", ylabel=\"y\", title=\"Re = 100\")\n# scatter!(ax, ghia_u, ghia_y, label=\"Ghia et al.\", marker=:circle)\n# lines!(ax, sim_u, sim_y, label=\"Present (N=$N)\", color=:red)\n# axislegend(ax)\n# fig\n\n\n\n\n\nGhia et al. (1982) reference data loaded successfully\nNumber of reference points: 17\n\n\n\nFigure 1\n\n\n\n\n\nConvergence analysis\n\nCode\n# Example mesh convergence data\ngrid_sizes = [16, 32, 64, 128, 256]\nerrors = [0.0512, 0.0134, 0.00341, 0.000862, 0.000217]\n\n# Compute convergence order\nfor i in 2:length(errors)\n    order = log(errors[i-1]/errors[i]) / log(grid_sizes[i]/grid_sizes[i-1])\n    @printf(\"N = %3d → %3d : order = %.2f\\n\", grid_sizes[i-1], grid_sizes[i], order)\nend\n\n\n\n\n\nN =  16 →  32 : order = 1.93\nN =  32 →  64 : order = 1.97\nN =  64 → 128 : order = 1.98\nN = 128 → 256 : order = 1.99\n\n\n\nFigure 2"
+  },
+  {
+    "objectID": "code/lid-driven-cavity.html#summary",
+    "href": "code/lid-driven-cavity.html#summary",
+    "title": "Lid-Driven Cavity Benchmark",
+    "section": "Summary",
+    "text": "Summary\n\n\n\n\n\n\n\n\n\n\nReynolds number\nGrid\nu_{min} (centreline)\nGhia et al.\nError (%)\n\n\n\n\n100\n128×128\n-0.2058\n-0.2058\n0.01\n\n\n400\n128×128\n-0.3273\n-0.3269\n0.12\n\n\n1000\n128×128\n-0.3829\n-0.3829\n0.03"
+  },
+  {
+    "objectID": "code/lid-driven-cavity.html#references",
+    "href": "code/lid-driven-cavity.html#references",
+    "title": "Lid-Driven Cavity Benchmark",
+    "section": "References",
+    "text": "References\n\nGhia, U., Ghia, K. N., & Shin, C. T. (1982). High-Re solutions for incompressible flow using the Navier-Stokes equations and a multigrid method. Journal of Computational Physics, 48(3), 387–411."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Download CV as PDF\nLast updated: May 2026"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Curriculum Vitae",
+    "section": "Education",
+    "text": "Education\nPhD in Fluid Mechanics — University of Sevilla\n2021 – present\nThesis: Dynamical Analysis of Collapsible Channels\nSupervisors: Prof. Miguel Ángel Herrada Gutierrez, Prof. Alfonso Miguel Gañán Calvo\nMSc in Physics and Mathematics — University of Granada\n2020 – 2022\nThesis: Modulation of S-waves in an elastic medium: slow-variable approximation and characterization of the amplitude through a nonlinear Schrödinger equation\nBSc in Physics — University Complutense of Madrid\n2014– 2019"
+  },
+  {
+    "objectID": "cv.html#research-experience",
+    "href": "cv.html#research-experience",
+    "title": "Curriculum Vitae",
+    "section": "Research experience",
+    "text": "Research experience\nDoctoral Researcher — University of Sevilla Lab Name\n2022 – 2026\nNumerical modelling of collapsible channels and tubes using JaM\nVisiting Student — University of Manchester Summer 2025\nWorked on modelling of wrinkles and drapes on elastic disks using oomph-lib"
+  },
+  {
+    "objectID": "cv.html#skills",
+    "href": "cv.html#skills",
+    "title": "Curriculum Vitae",
+    "section": "Skills",
+    "text": "Skills\nProgramming: MATLAB, Julia, Fortran (basic), C++ (basic)\nVisualization: ParaView\nOther: LaTeX, Git, Linux"
+  },
+  {
+    "objectID": "cv.html#languages",
+    "href": "cv.html#languages",
+    "title": "Curriculum Vitae",
+    "section": "Languages",
+    "text": "Languages\n\nSpanish — Native\nEnglish — Fluent\nFrench — Basic"
+  },
+  {
+    "objectID": "cv.html#publications",
+    "href": "cv.html#publications",
+    "title": "Curriculum Vitae",
+    "section": "Publications",
+    "text": "Publications\nSee the Research page for a complete list."
+  },
+  {
+    "objectID": "cv.html#awards-grants",
+    "href": "cv.html#awards-grants",
+    "title": "Curriculum Vitae",
+    "section": "Awards & Grants",
+    "text": "Awards & Grants\n\n2022 — PhD fellowship, Agencia Estatal de Investigación"
+  },
+  {
+    "objectID": "code_template.html",
+    "href": "code_template.html",
+    "title": "Code",
+    "section": "",
+    "text": "I am passionate about writing robust, well-documented, and reproducible scientific code. My public repositories are hosted on my GitHub page.\nI believe research codes should be open-source, reproducible, and freely available to the scientific community."
+  },
+  {
+    "objectID": "code_template.html#solvers-libraries",
+    "href": "code_template.html#solvers-libraries",
+    "title": "Code",
+    "section": "Solvers & Libraries",
+    "text": "Solvers & Libraries\n\nProjectName 🌊\nDescription of your main code project. For example: A high-order finite volume solver for incompressible Navier-Stokes equations, implemented in Julia. Features adaptive mesh refinement, parallel computation via MPI, and post-processing tools.\nLanguage: Julia | License: MIT\n[Documentation] [GitHub]\n\n\nAnotherProject 🔧\nMATLAB toolbox for [specific task]. For example: A collection of MATLAB functions for spectral analysis of turbulent flow data, including energy spectra computation, structure functions, and proper orthogonal decomposition (POD).\nLanguage: MATLAB | License: GPL-3.0\n[GitHub]\n\n\nUtilityScripts ⚙️\nMiscellaneous utilities. Post-processing scripts, mesh generation tools, and visualization helpers used across my research projects.\nLanguages: Julia, MATLAB, Python\n[GitHub]"
+  },
+  {
+    "objectID": "code_template.html#notebooks-tutorials",
+    "href": "code_template.html#notebooks-tutorials",
+    "title": "Code",
+    "section": "Notebooks & Tutorials",
+    "text": "Notebooks & Tutorials\nThese are interactive computational notebooks showcasing specific analyses and methods. Built with Quarto — code and results side by side.\n\n\n\nTopic\nLanguage\nDescription\n\n\n\n\nLid-driven cavity benchmark\nJulia\nValidation of my solver against benchmark data\n\n\nSpectral analysis of turbulence\nMATLAB\nComputing energy spectra from DNS data\n\n\nMesh convergence study\nJulia\nGrid independence analysis for channel flow\n\n\n\n\n\n\n\n\n\nTipReproducibility\n\n\n\nAll notebooks include the complete code to reproduce the results. Clone the repository and run them locally with Quarto."
+  }
+]
