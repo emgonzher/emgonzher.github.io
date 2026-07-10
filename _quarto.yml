@@ -1,0 +1,48 @@
+project:
+  type: website
+  output-dir: _site
+
+# Freeze computational output so GitHub Actions doesn't need Julia/MATLAB
+# Run `quarto render` locally first, then commit _freeze/
+execute:
+  freeze: auto
+
+website:
+  title: "E. G. Herrer"
+  description: "PhD in Fluid Mechanics | CFD Researcher"
+# site-url: https://yourname.com  # Uncomment when you have a custom domain
+
+  navbar:
+    title: "E. G. Herrer"
+    left:
+      - href: index.qmd
+        text: Home
+      - href: research.qmd
+        text: Research
+      - href: code.qmd
+        text: Code
+#      - href: teaching.qmd
+#        text: Teaching
+      - href: cv.qmd
+        text: CV
+    right:
+      - icon: github
+        href: https://github.com/emgonzher
+      - icon: envelope
+        href: mailto:emiherrer@gmail.com
+
+  page-footer:
+    left: "© 2026 E. G. Herrer"
+    right: "Made with [Quarto](https://quarto.org)"
+
+  search: true
+
+format:
+  html:
+    theme: cosmo         # Clean, minimal theme. Others: flatly, lumen, simplex
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    code-fold: true      # Collapsible code blocks - great for showing results first
+    code-tools: false
+    html-math-method: katex

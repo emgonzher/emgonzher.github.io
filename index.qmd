@@ -1,0 +1,38 @@
+---
+title: "Emiliano G. Herrer"
+toc: false
+---
+
+::: {.profile-section}
+
+![](images/profile.jpg){.profile-photo fig-alt="Profile photo"}
+
+::: {}
+## About me
+
+I am a PhD candidate (currently finishing!) in **Fluid Mechanics** at [University of Sevilla](https://www.us.es/), working on computational fluid dynamics (CFD) with applications in fluid-solid interaction problems.
+
+More specifically, my research focus on the numerical modelling of flows through collapsible channels, using different software as Matlab, Julia and C++ to perform different kind of simulations. Check my [code](code.qmd) section to take a look to some examples of what I do!
+
+I am passionate about open-source scientific computing, reproducible research,  and making CFD tools accessible to the community.
+
+**Interests:** CFD, Flud Mechanics, Elasticity, Scientific Computing
+
+**Contact:** [emiherrer@gmail.com](mailto:emiherrer@gmail.com)
+:::
+
+<!--
+:::
+
+## Publications
+
+::: {.pub-entry}
+[ E. G. Herrer]{.pub-authors},  M. A. Herrada., A. M. Gañán-Calvo, P. S. Stewart. 
+[**Stability of finite-length collapsible channel flow to spanwise perturbations**]{.pub-title}. 
+[*Physic of Fluids*, 36, 124105 (2024).]{.pub-venue}  
+[[PDF]](https://pubs.aip.org/aip/pof/article-pdf/doi/10.1063/5.0237604/20279061/124105_1_5.0237604.pdf) [[DOI]](https://doi.org/10.1063/5.0237604) 
+:::
+
+See all publications on the [Research](research.qmd) page.
+
+-->

@@ -1,0 +1,64 @@
+---
+title: "Code"
+---
+
+I am passionate about writing robust, well-documented, and reproducible scientific code. 
+My public repositories are hosted on [my GitHub page](https://github.com/your-username).
+
+I believe research codes should be **open-source**, **reproducible**, and 
+**freely available** to the scientific community.
+
+
+## Solvers & Libraries
+
+::: {.project-card}
+### [ProjectName](https://github.com/your-username/project1) 🌊
+
+**Description of your main code project.** For example: A high-order finite volume solver 
+for incompressible Navier-Stokes equations, implemented in Julia. Features adaptive mesh 
+refinement, parallel computation via MPI, and post-processing tools.
+
+**Language:** Julia | **License:** MIT  
+[[Documentation]](https://your-username.github.io/project1/) 
+[[GitHub]](https://github.com/your-username/project1)
+:::
+
+::: {.project-card}
+### [AnotherProject](https://github.com/your-username/project2) 🔧
+
+**MATLAB toolbox for [specific task].** For example: A collection of MATLAB functions for 
+spectral analysis of turbulent flow data, including energy spectra computation, 
+structure functions, and proper orthogonal decomposition (POD).
+
+**Language:** MATLAB | **License:** GPL-3.0  
+[[GitHub]](https://github.com/your-username/project2)
+:::
+
+::: {.project-card}
+### [UtilityScripts](https://github.com/your-username/project3) ⚙️
+
+**Miscellaneous utilities.** Post-processing scripts, mesh generation tools, 
+and visualization helpers used across my research projects.
+
+**Languages:** Julia, MATLAB, Python  
+[[GitHub]](https://github.com/your-username/project3)
+:::
+
+
+## Notebooks & Tutorials
+
+These are interactive computational notebooks showcasing specific analyses and methods. 
+Built with [Quarto](https://quarto.org) — code and results side by side.
+
+| Topic | Language | Description |
+|-------|----------|-------------|
+| [Lid-driven cavity benchmark](code/lid-driven-cavity.qmd) | Julia | Validation of my solver against benchmark data |
+| [Spectral analysis of turbulence](code/spectral-analysis.qmd) | MATLAB | Computing energy spectra from DNS data |
+| [Mesh convergence study](code/mesh-convergence.qmd) | Julia | Grid independence analysis for channel flow |
+
+::: {.callout-tip}
+## Reproducibility
+All notebooks include the complete code to reproduce the results. 
+Clone the [repository](https://github.com/your-username/your-site) 
+and run them locally with Quarto.
+:::

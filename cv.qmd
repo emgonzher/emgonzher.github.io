@@ -1,0 +1,63 @@
+---
+title: "Curriculum Vitae"
+toc: true
+---
+
+[Download CV as PDF](cv/cv.pdf){.btn .btn-primary}
+
+Last updated: May 2026
+
+---
+
+## Education
+
+**PhD in Fluid Mechanics** — University of Sevilla  
+*2021 – present*  
+Thesis: *Dynamical Analysis of Collapsible Channels* 
+
+Supervisors:  Prof. [Miguel Ángel Herrada Gutierrez](https://edwww.us.es/trabaja-en-la-us/directorio/miguel-angel-herrada-gutierrez), Prof. [Alfonso Miguel Gañán Calvo](https://edwww.us.es/trabaja-en-la-us/directorio/alfonso-miguel-ganan-calvo)
+
+**MSc in Physics and Mathematics** — University of Granada  
+*2020 – 2022*  
+Thesis: *Modulation of S-waves in an elastic medium: slow-variable approximation and characterization of the amplitude through a nonlinear Schrödinger equation*
+
+**BSc in Physics** — University Complutense of Madrid  
+*2014– 2019*
+
+
+## Research experience
+
+**Doctoral Researcher** — University of Sevilla Lab Name  
+*2022 – 2026*  
+Numerical modelling of collapsible channels and tubes using [JaM](https://miguelherrada.github.io/JAM/index.html)
+
+**Visiting Student** — University of Manchester
+*Summer 2025*  
+Worked on modelling of wrinkles and drapes on elastic disks using [oomph-lib](https://oomph-lib.github.io/oomph-lib/doc/html/index.html)
+
+## Skills
+
+**Programming:** MATLAB, Julia, Fortran (basic), C++ (basic)
+
+**Visualization:** ParaView  
+
+**Other:** LaTeX, Git, Linux
+
+
+## Languages
+
+- Spanish — Native
+- English — Fluent 
+- French — Basic 
+
+
+## Publications
+
+See the [Research](research.qmd) page for a complete list.
+
+
+## Awards & Grants
+
+- **2022** — PhD fellowship, [Agencia Estatal de Investigación](https://www.aei.gob.es/convocatorias/buscador-convocatorias/ayudas-contratos-predoctorales-formacion-doctores-2020-2)
+
+

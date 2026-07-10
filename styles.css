@@ -1,0 +1,87 @@
+/* ── Clean, minimal academic site styles ── */
+
+/* Overall feel */
+body {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+  line-height: 1.7;
+}
+
+/* Navbar - keep it simple */
+.navbar {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Home page profile section */
+.profile-photo {
+  border-radius: 8px;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.profile-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Project cards on Code page */
+.project-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.2s;
+}
+
+.project-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+/* Publication list */
+.pub-entry {
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 3px solid #2780e3;
+}
+
+.pub-entry .pub-title {
+  font-weight: 600;
+}
+
+.pub-entry .pub-authors {
+  color: #555;
+}
+
+.pub-entry .pub-venue {
+  font-style: italic;
+  color: #777;
+}
+
+/* Links - subtle */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Code blocks */
+pre {
+  border-radius: 6px;
+}

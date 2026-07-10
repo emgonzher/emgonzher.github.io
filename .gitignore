@@ -1,0 +1,18 @@
+# Quarto rendered output
+_site/
+.quarto/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# Do NOT ignore _freeze/ — it must be committed for CI deployment
+# !_freeze/
+
+/.quarto/
+**/*.quarto_ipynb

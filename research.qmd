@@ -1,0 +1,43 @@
+---
+title: "Research"
+---
+
+## Research interests
+
+My research focuses on flows through collapsible channels: problems in which a fluid interacts nonlinearly with an elastic solid. I am mainly interested in the numerical modelling of these systems, aiming to capture their dynamical behaviour, study the effect of system parameters, and characterise the physical phenomena that emerge.
+
+### My thesis
+**Dynamical Anlysis of Collapsible Channels with Hyperelastic Walls** (2026)  
+Supervisors: Prof. Alfonso Miguel Gañán Calvo, Prof. Miguel Ángel Herrada Gutierrez — University of Sevilla
+
+*Abstract:* We present a numerical study of collapsible channels with different geometries. We analyse and characterise families of steady solutions and investigate their linear stability under variations in physical parameters. The computations are carried out using JaM, a numerical framework based on the use of analytical Jacobians and sparse collocation matrices, which allows the modelling of fluid–solid interaction problems under large deformations.
+
+
+[Download PDF](research/thesis/thesis.pdf){.btn .btn-primary} 
+[Browse HTML version](research/thesis/){.btn .btn-outline-primary}
+
+::: {.callout-note}
+## Coming soon (hopefully)
+Interactive HTML version built with Quarto — providing browsable chapters with embedded figures and code.
+:::
+
+
+## Publications
+
+### Journal articles
+
+::: {.pub-entry}
+[ E. G. Herrer]{.pub-authors},  M. A. Herrada., A. M. Gañán-Calvo, P. S. Stewart. 
+[**Stability of finite-length collapsible channel flow to spanwise perturbations**]{.pub-title}. 
+[*Physic of Fluids*, 36, 124105 (2024).]{.pub-venue}  
+[[PDF]](https://pubs.aip.org/aip/pof/article-pdf/doi/10.1063/5.0237604/20279061/124105_1_5.0237604.pdf) [[DOI]](https://doi.org/10.1063/5.0237604) 
+:::
+
+
+## Talks & Presentations
+
+| Date | Event | Title | Materials |
+|------|-------|-------|-----------|
+| Nov 2025 | Informal Applied, University of Manchester | Wrinkles to Drapes in Elastic Discs | [Slides](research/slides_no/EGH_FvK_presentation.pdf) |
+| Nov 2024 | Euro Mech, University of Aachen | Stability of a finite-length collapsible channel flow to spanwise perturbations  | [Poster](research/talks/abstractEuroMech.pdf) |
+| Jul 2024 | Seminar, IIT-Bombay |Advances in Smart Air Sensing & Emerging Control Technologies | [Slides](research/slides_no/FSI_channels_fibres.pdf) |

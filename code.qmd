@@ -1,0 +1,31 @@
+---
+title: "Code"
+---
+
+**[Section under construction...]**
+
+I am interested about writing robust, well-documented, and reproducible scientific code. 
+My public repositories are hosted on [my GitHub page](https://github.com/emgonzher).
+
+I believe research codes should be **open-source**, **reproducible**, and 
+**freely available** to the scientific community.
+
+
+## Solvers & Libraries
+
+::: {.project-card}
+### [Collapsible channels & tubes](https://github.com/your-username/project1)
+::: {.callout-note}
+## Coming soon (hopefully)
+Acces to updated git-hub repository with examples and tutorials
+:::
+:::
+
+::: {.project-card}
+### [Solid Mechanics](https://github.com/your-username/project2)
+::: {.callout-note}
+## Coming soon (hopefully)
+Acces to updated git-hub repository with examples and tutorials
+:::
+:::
+
