@@ -21,8 +21,6 @@ website:
         text: Research
       - href: code.qmd
         text: Code
-#      - href: teaching.qmd
-#        text: Teaching
       - href: cv.qmd
         text: CV
       - href: postcards.qmd
