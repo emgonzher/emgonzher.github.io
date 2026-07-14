@@ -1,0 +1,148 @@
+---
+title: "Postcards"
+toc: false
+page-layout: full
+---
+
+The PhD-friends postcards collection!
+
+```{=html}
+<div id="postcard-gallery">
+  <a href="#" class="postcard-link" data-full="postcards/aachen.png"><img src="postcards/aachen.png" alt="Aachen"></a>
+  <a href="#" class="postcard-link" data-full="postcards/algarve.png"><img src="postcards/algarve.png" alt="Algarve"></a>
+  <a href="#" class="postcard-link" data-full="postcards/arras.png"><img src="postcards/arras.png" alt="Arras"></a>
+  <a href="#" class="postcard-link" data-full="postcards/azores.png"><img src="postcards/azores.png" alt="Azores"></a>
+  <a href="#" class="postcard-link" data-full="postcards/barcelona.png"><img src="postcards/barcelona.png" alt="Barcelona"></a>
+  <a href="#" class="postcard-link" data-full="postcards/edinburgo.png"><img src="postcards/edinburgo.png" alt="Edinburgo"></a>
+  <a href="#" class="postcard-link" data-full="postcards/estanbul.png"><img src="postcards/estanbul.png" alt="Estambul"></a>
+  <a href="#" class="postcard-link" data-full="postcards/grecia.png"><img src="postcards/grecia.png" alt="Grecia"></a>
+  <a href="#" class="postcard-link" data-full="postcards/heidelberg.png"><img src="postcards/heidelberg.png" alt="Heidelberg"></a>
+  <a href="#" class="postcard-link" data-full="postcards/lanzarote.png"><img src="postcards/lanzarote.png" alt="Lanzarote"></a>
+  <a href="#" class="postcard-link" data-full="postcards/lisboa.png"><img src="postcards/lisboa.png" alt="Lisboa"></a>
+  <a href="#" class="postcard-link" data-full="postcards/pisa.png"><img src="postcards/pisa.png" alt="Pisa"></a>
+  <a href="#" class="postcard-link" data-full="postcards/pisa2.png"><img src="postcards/pisa2.png" alt="Pisa 2"></a>
+  <a href="#" class="postcard-link" data-full="postcards/portugal.png"><img src="postcards/portugal.png" alt="Portugal"></a>
+  <a href="#" class="postcard-link" data-full="postcards/suecia.png"><img src="postcards/suecia.png" alt="Suecia"></a>
+  <a href="#" class="postcard-link" data-full="postcards/treviso1.png"><img src="postcards/treviso1.png" alt="Treviso 1"></a>
+  <a href="#" class="postcard-link" data-full="postcards/treviso2.png"><img src="postcards/treviso2.png" alt="Treviso 2"></a>
+  <a href="#" class="postcard-link" data-full="postcards/viena.png"><img src="postcards/viena.png" alt="Viena"></a>
+  <a href="#" class="postcard-link" data-full="postcards/zadar.png"><img src="postcards/zadar.png" alt="Zadar"></a>
+  <a href="#" class="postcard-link" data-full="postcards/esa.png"><img src="postcards/esa.png" alt="ESA"></a>
+</div>
+
+<!-- Lightbox overlay (hidden by default) -->
+<div id="lightbox-overlay">
+  <span id="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<style>
+#postcard-gallery {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+#postcard-gallery a {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  display: block;
+}
+
+#postcard-gallery a:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#postcard-gallery img {
+  width: 100% !important;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+/* Lightbox overlay */
+#lightbox-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+}
+
+#lightbox-overlay.active {
+  display: flex;
+}
+
+#lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 6px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  cursor: default;
+}
+
+#lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+}
+
+#lightbox-close:hover {
+  color: #ccc;
+}
+</style>
+
+<script>
+(function() {
+  const overlay = document.getElementById('lightbox-overlay');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.getElementById('lightbox-close');
+  const links = document.querySelectorAll('.postcard-link');
+
+  links.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const fullSrc = link.getAttribute('data-full');
+      lightboxImg.setAttribute('src', fullSrc);
+      overlay.classList.add('active');
+    });
+  });
+
+  function closeLightbox() {
+    overlay.classList.remove('active');
+    lightboxImg.setAttribute('src', '');
+  }
+
+  // Click outside the image (on the dark overlay) closes it
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) {
+      closeLightbox();
+    }
+  });
+
+  // Close button
+  closeBtn.addEventListener('click', closeLightbox);
+
+  // Escape key closes it
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && overlay.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+})();
+</script>
+```

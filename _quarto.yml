@@ -25,6 +25,8 @@ website:
 #        text: Teaching
       - href: cv.qmd
         text: CV
+      - href: postcards.qmd
+        text: Postcards
     right:
       - icon: github
         href: https://github.com/emgonzher
