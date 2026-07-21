@@ -35,25 +35,18 @@
     "text": "References\n\nPope, S. B. (2000). Turbulent Flows. Cambridge University Press.\nIshihara, T., Gotoh, T., & Kaneda, Y. (2009). Study of high-Reynolds number isotropic turbulence by direct numerical simulation. Annual Review of Fluid Mechanics, 41, 165–180."
   },
   {
-    "objectID": "code_template.html",
-    "href": "code_template.html",
-    "title": "Code",
+    "objectID": "phase-plane.html",
+    "href": "phase-plane.html",
+    "title": "Phase Plane Explorer",
     "section": "",
-    "text": "I am passionate about writing robust, well-documented, and reproducible scientific code. My public repositories are hosted on my GitHub page.\nI believe research codes should be open-source, reproducible, and freely available to the scientific community."
+    "text": "Explore the phase portrait of a 2D autonomous system. Type your own equations and parameter names, pick a preset, drag to pan, scroll to zoom, and click anywhere on the plot to drop a new trajectory.\n\n  \n    dx/dt =\n    \n  \n  \n    dy/dt =\n    \n  \n\n\n\n  Parameters (comma-separated names)\n  \n\n\n\n\n\n  Damped pendulum\n  Van der Pol\n  Predator-prey\n  Harmonic oscillator\n\n\n\n  x0\n  \n  y0\n  \n  Add trajectory\n  Clear\n  Reset view\n\n\n\n  \n\n\n  Click to add a trajectory · drag to pan · scroll to zoom · use x, y, and your parameter names in the equations."
   },
   {
-    "objectID": "code_template.html#solvers-libraries",
-    "href": "code_template.html#solvers-libraries",
-    "title": "Code",
-    "section": "Solvers & Libraries",
-    "text": "Solvers & Libraries\n\nProjectName 🌊\nDescription of your main code project. For example: A high-order finite volume solver for incompressible Navier-Stokes equations, implemented in Julia. Features adaptive mesh refinement, parallel computation via MPI, and post-processing tools.\nLanguage: Julia | License: MIT\n[Documentation] [GitHub]\n\n\nAnotherProject 🔧\nMATLAB toolbox for [specific task]. For example: A collection of MATLAB functions for spectral analysis of turbulent flow data, including energy spectra computation, structure functions, and proper orthogonal decomposition (POD).\nLanguage: MATLAB | License: GPL-3.0\n[GitHub]\n\n\nUtilityScripts ⚙️\nMiscellaneous utilities. Post-processing scripts, mesh generation tools, and visualization helpers used across my research projects.\nLanguages: Julia, MATLAB, Python\n[GitHub]"
-  },
-  {
-    "objectID": "code_template.html#notebooks-tutorials",
-    "href": "code_template.html#notebooks-tutorials",
-    "title": "Code",
-    "section": "Notebooks & Tutorials",
-    "text": "Notebooks & Tutorials\nThese are interactive computational notebooks showcasing specific analyses and methods. Built with Quarto — code and results side by side.\n\n\n\nTopic\nLanguage\nDescription\n\n\n\n\nLid-driven cavity benchmark\nJulia\nValidation of my solver against benchmark data\n\n\nSpectral analysis of turbulence\nMATLAB\nComputing energy spectra from DNS data\n\n\nMesh convergence study\nJulia\nGrid independence analysis for channel flow\n\n\n\n\n\n\n\n\n\nTipReproducibility\n\n\n\nAll notebooks include the complete code to reproduce the results. Clone the repository and run them locally with Quarto."
+    "objectID": "postcards.html",
+    "href": "postcards.html",
+    "title": "Postcards",
+    "section": "",
+    "text": "The PhD-friends postcards collection!\n\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n\n\n\n\n  ×\n  ❮\n  \n  ❯"
   },
   {
     "objectID": "postcards_arrows.html",
@@ -154,11 +147,32 @@
     "text": "Talks & Presentations\n\n\n\nDate\nEvent\nTitle\nMaterials\n\n\n\n\nNov 2025\nInformal Applied, University of Manchester\nWrinkles to Drapes in Elastic Discs\nSlides\n\n\nNov 2024\nEuro Mech, University of Aachen\nStability of a finite-length collapsible channel flow to spanwise perturbations\nPoster\n\n\nJul 2024\nSeminar, IIT-Bombay\nAdvances in Smart Air Sensing & Emerging Control Technologies\nSlides"
   },
   {
-    "objectID": "postcards.html",
-    "href": "postcards.html",
-    "title": "Postcards",
+    "objectID": "phase-plane_old.html",
+    "href": "phase-plane_old.html",
+    "title": "Phase Plane Explorer",
     "section": "",
-    "text": "The PhD-friends postcards collection!\n\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n\n\n\n\n  ×\n  ❮\n  \n  ❯"
+    "text": "Explore the phase portrait of a 2D autonomous system. Type your own equations, pick a preset, adjust parameters, and click anywhere on the plot to drop a new trajectory.\n\n  \n    dx/dt =\n    \n  \n  \n    dy/dt =\n    \n  \n\n\n\n  Damped pendulum\n  Van der Pol\n  Predator-prey\n  Harmonic oscillator\n\n\n\n  \n    \n      a\n      \n      0.2\n    \n    \n      b\n      \n      1.0\n    \n  \n  \n    x0\n    \n    y0\n    \n    Add trajectory\n    Clear\n  \n\n\n\n  \n\nClick anywhere on the plot to add a trajectory from that point. Use x, y, a, b in your equations — e.g. sin(x), exp(-y), x^2."
+  },
+  {
+    "objectID": "code_template.html",
+    "href": "code_template.html",
+    "title": "Code",
+    "section": "",
+    "text": "I am passionate about writing robust, well-documented, and reproducible scientific code. My public repositories are hosted on my GitHub page.\nI believe research codes should be open-source, reproducible, and freely available to the scientific community."
+  },
+  {
+    "objectID": "code_template.html#solvers-libraries",
+    "href": "code_template.html#solvers-libraries",
+    "title": "Code",
+    "section": "Solvers & Libraries",
+    "text": "Solvers & Libraries\n\nProjectName 🌊\nDescription of your main code project. For example: A high-order finite volume solver for incompressible Navier-Stokes equations, implemented in Julia. Features adaptive mesh refinement, parallel computation via MPI, and post-processing tools.\nLanguage: Julia | License: MIT\n[Documentation] [GitHub]\n\n\nAnotherProject 🔧\nMATLAB toolbox for [specific task]. For example: A collection of MATLAB functions for spectral analysis of turbulent flow data, including energy spectra computation, structure functions, and proper orthogonal decomposition (POD).\nLanguage: MATLAB | License: GPL-3.0\n[GitHub]\n\n\nUtilityScripts ⚙️\nMiscellaneous utilities. Post-processing scripts, mesh generation tools, and visualization helpers used across my research projects.\nLanguages: Julia, MATLAB, Python\n[GitHub]"
+  },
+  {
+    "objectID": "code_template.html#notebooks-tutorials",
+    "href": "code_template.html#notebooks-tutorials",
+    "title": "Code",
+    "section": "Notebooks & Tutorials",
+    "text": "Notebooks & Tutorials\nThese are interactive computational notebooks showcasing specific analyses and methods. Built with Quarto — code and results side by side.\n\n\n\nTopic\nLanguage\nDescription\n\n\n\n\nLid-driven cavity benchmark\nJulia\nValidation of my solver against benchmark data\n\n\nSpectral analysis of turbulence\nMATLAB\nComputing energy spectra from DNS data\n\n\nMesh convergence study\nJulia\nGrid independence analysis for channel flow\n\n\n\n\n\n\n\n\n\nTipReproducibility\n\n\n\nAll notebooks include the complete code to reproduce the results. Clone the repository and run them locally with Quarto."
   },
   {
     "objectID": "index.html",

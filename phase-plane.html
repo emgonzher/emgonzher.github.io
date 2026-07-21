@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Emiliano G. Herrer – E. G. Herrer</title>
+<title>Phase Plane Explorer – E. G. Herrer</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Postcards</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./phase-plane.html"> 
+    <a class="nav-link active" href="./phase-plane.html" aria-current="page"> 
 <span class="menu-text">Phase Plane Explorer</span></a>
   </li>  
 </ul>
@@ -136,21 +136,21 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Emiliano G. Herrer</h1>
+<h1 class="title">Phase Plane Explorer</h1>
 </div>
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -162,34 +162,313 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="profile-section">
-<p><img src="images/profile.jpg" class="profile-photo img-fluid" alt="Profile photo"></p>
-<section id="about-me" class="level2">
-<h2 class="anchored" data-anchor-id="about-me">About me</h2>
-<p>I am a PhD candidate (currently finishing!) in <strong>Fluid Mechanics</strong> at <a href="https://www.us.es/">University of Sevilla</a>, working on computational fluid dynamics (CFD) with applications in fluid-solid interaction problems.</p>
-<p>More specifically, my research focus on the numerical modelling of flows through collapsible channels, using different software as Matlab, Julia and C++ to perform different kind of simulations. Check my <a href="./code.html">code</a> section to take a look to some examples of what I do!</p>
-<p>I am passionate about open-source scientific computing, reproducible research, and making CFD tools accessible to the community.</p>
-<p><strong>Interests:</strong> CFD, Flud Mechanics, Elasticity, Scientific Computing</p>
-<p><strong>Contact:</strong> <a href="mailto:emiherrer@gmail.com">emiherrer@gmail.com</a></p>
-</section>
-<!--
-:::
-
-## Publications
-
-::: {.pub-entry}
-[ E. G. Herrer]{.pub-authors},  M. A. Herrada., A. M. Gañán-Calvo, P. S. Stewart. 
-[**Stability of finite-length collapsible channel flow to spanwise perturbations**]{.pub-title}. 
-[*Physic of Fluids*, 36, 124105 (2024).]{.pub-venue}  
-[[PDF]](https://pubs.aip.org/aip/pof/article-pdf/doi/10.1063/5.0237604/20279061/124105_1_5.0237604.pdf) [[DOI]](https://doi.org/10.1063/5.0237604) 
-:::
-
-See all publications on the [Research](research.qmd) page.
-
--->
-
-
+<p>Explore the phase portrait of a 2D autonomous system. Type your own equations and parameter names, pick a preset, drag to pan, scroll to zoom, and click anywhere on the plot to drop a new trajectory.</p>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 1rem;">
+  <div>
+    <label style="font-size: 13px; color: var(--text-secondary);">dx/dt =</label>
+    <input id="dx" type="text" value="y" style="width: 100%;">
+  </div>
+  <div>
+    <label style="font-size: 13px; color: var(--text-secondary);">dy/dt =</label>
+    <input id="dy" type="text" value="-sin(x) - a*y" style="width: 100%;">
+  </div>
 </div>
+
+<div style="margin-bottom: 1rem;">
+  <label style="font-size: 13px; color: var(--text-secondary);">Parameters (comma-separated names)</label>
+  <input id="paramNames" type="text" value="a" style="width: 100%;">
+</div>
+
+<div id="paramSliders" style="display: flex; flex-direction: column; gap: 6px; margin-bottom: 1rem;"></div>
+
+<div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1rem;">
+  <button id="presetPendulum">Damped pendulum</button>
+  <button id="presetVdP">Van der Pol</button>
+  <button id="presetLV">Predator-prey</button>
+  <button id="presetSHO">Harmonic oscillator</button>
+</div>
+
+<div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 1rem;">
+  <label style="font-size: 13px; color: var(--text-secondary);">x0</label>
+  <input id="x0" type="number" value="2" step="0.5" style="width: 70px;">
+  <label style="font-size: 13px; color: var(--text-secondary);">y0</label>
+  <input id="y0" type="number" value="0" step="0.5" style="width: 70px;">
+  <button id="runBtn">Add trajectory</button>
+  <button id="clearBtn">Clear</button>
+  <button id="resetViewBtn">Reset view</button>
+</div>
+
+<div style="position: relative; width: 100%; height: 420px; border: 0.5px solid var(--border); border-radius: 8px; overflow: hidden;">
+  <canvas id="phase" style="width:100%; height:100%; display:block; cursor: grab;"></canvas>
+</div>
+<p style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">
+  Click to add a trajectory · drag to pan · scroll to zoom · use <code>x</code>, <code>y</code>, and your parameter names in the equations.
+</p>
+
+<style>
+#dx, #dy, #x0, #y0, #paramNames {
+  height: 34px;
+  padding: 4px 8px;
+  border: 0.5px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface-2);
+  color: var(--text-primary);
+}
+button {
+  height: 34px;
+  padding: 0 14px;
+  border: 0.5px solid var(--border-strong);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+button:hover { background: var(--surface-1); }
+button:active { transform: scale(0.98); }
+.param-row { display: flex; align-items: center; gap: 10px; }
+.param-row label { font-size: 13px; color: var(--text-secondary); min-width: 50px; }
+.param-row span { font-size: 13px; min-width: 36px; }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.4.2/math.min.js"></script>
+<script>
+(function(){
+  const canvas = document.getElementById('phase');
+  const ctx = canvas.getContext('2d');
+  const dxIn = document.getElementById('dx');
+  const dyIn = document.getElementById('dy');
+  const x0In = document.getElementById('x0');
+  const y0In = document.getElementById('y0');
+  const paramNamesIn = document.getElementById('paramNames');
+  const paramSliders = document.getElementById('paramSliders');
+
+  let XMIN=-6, XMAX=6, YMIN=-6, YMAX=6;
+  let DEFAULT_RANGE = 6;
+  let paramValues = {};
+
+  function resize(){
+    const r = canvas.getBoundingClientRect();
+    canvas.width = r.width;
+    canvas.height = r.height;
+    draw();
+  }
+  window.addEventListener('resize', resize);
+
+  function sx(x){ return (x-XMIN)/(XMAX-XMIN)*canvas.width; }
+  function sy(y){ return canvas.height - (y-YMIN)/(YMAX-YMIN)*canvas.height; }
+  function invX(px){ return XMIN + px/canvas.width*(XMAX-XMIN); }
+  function invY(py){ return YMIN + (canvas.height-py)/canvas.height*(YMAX-YMIN); }
+
+  // ---- Dynamic parameter sliders ----
+  function rebuildParamSliders(defaults){
+    const names = paramNamesIn.value.split(',').map(s => s.trim()).filter(Boolean);
+    paramSliders.innerHTML = '';
+    paramValues = {};
+    names.forEach(name => {
+      const val = (defaults && defaults[name] !== undefined) ? defaults[name] : 1;
+      paramValues[name] = val;
+      const row = document.createElement('div');
+      row.className = 'param-row';
+      row.innerHTML = `<label>${name}</label>
+        <input type="range" min="-5" max="5" step="0.1" value="${val}" style="flex:1;">
+        <span>${val}</span>`;
+      const slider = row.querySelector('input');
+      const out = row.querySelector('span');
+      slider.addEventListener('input', () => {
+        paramValues[name] = parseFloat(slider.value);
+        out.textContent = slider.value;
+        draw();
+      });
+      paramSliders.appendChild(row);
+    });
+    draw();
+  }
+  paramNamesIn.addEventListener('change', () => rebuildParamSliders());
+
+  let trajectories = [];
+
+  function getFns(){
+    const fx = math.compile(dxIn.value);
+    const fy = math.compile(dyIn.value);
+    return { f: (x,y) => {
+      const scope = Object.assign({x,y}, paramValues);
+      return [fx.evaluate(scope), fy.evaluate(scope)];
+    }};
+  }
+
+  function integrate(x0,y0){
+    let f;
+    try { f = getFns().f; } catch(e){ return []; }
+    let x=x0, y=y0, h=0.03, pts=[[x,y]];
+    for(let i=0;i<3000;i++){
+      let k1,k2,k3,k4;
+      try {
+        k1=f(x,y);
+        k2=f(x+h/2*k1[0], y+h/2*k1[1]);
+        k3=f(x+h/2*k2[0], y+h/2*k2[1]);
+        k4=f(x+h*k3[0], y+h*k3[1]);
+      } catch(e){ break; }
+      x += h/6*(k1[0]+2*k2[0]+2*k3[0]+k4[0]);
+      y += h/6*(k1[1]+2*k2[1]+2*k3[1]+k4[1]);
+      if(!isFinite(x)||!isFinite(y)||Math.abs(x)>200||Math.abs(y)>200) break;
+      pts.push([x,y]);
+    }
+    return pts;
+  }
+
+  function drawField(){
+    let f;
+    try { f = getFns().f; } catch(e){ return; }
+    ctx.strokeStyle = '#c3c2b7';
+    ctx.lineWidth = 1;
+    const stepX = (XMAX-XMIN)/16, stepY = (YMAX-YMIN)/16;
+    for(let gx=XMIN; gx<=XMAX; gx+=stepX){
+      for(let gy=YMIN; gy<=YMAX; gy+=stepY){
+        let v;
+        try { v = f(gx,gy); } catch(e){ continue; }
+        let mag = Math.hypot(v[0],v[1]) || 1;
+        let dx = v[0]/mag*stepX*0.35, dy = v[1]/mag*stepY*0.35;
+        ctx.beginPath();
+        ctx.moveTo(sx(gx-dx/2), sy(gy-dy/2));
+        ctx.lineTo(sx(gx+dx/2), sy(gy+dy/2));
+        ctx.stroke();
+      }
+    }
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.strokeStyle = '#898781';
+    ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(0,sy(0)); ctx.lineTo(canvas.width,sy(0)); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(sx(0),0); ctx.lineTo(sx(0),canvas.height); ctx.stroke();
+
+    drawField();
+
+    trajectories.forEach((pts) => {
+      ctx.strokeStyle = '#2a78d6';
+      ctx.lineWidth = 1.6;
+      ctx.beginPath();
+      pts.forEach((p,i) => { const X=sx(p[0]), Y=sy(p[1]); i===0?ctx.moveTo(X,Y):ctx.lineTo(X,Y); });
+      ctx.stroke();
+      if(pts.length){
+        ctx.fillStyle = '#2a78d6';
+        ctx.beginPath(); ctx.arc(sx(pts[0][0]), sy(pts[0][1]), 3.5, 0, 7); ctx.fill();
+      }
+    });
+  }
+
+  function addTrajectory(x0,y0){
+    trajectories.push(integrate(x0,y0));
+    draw();
+  }
+
+  function setSystem(dxExpr, dyExpr, names, defaults, range){
+    dxIn.value = dxExpr;
+    dyIn.value = dyExpr;
+    paramNamesIn.value = names;
+    DEFAULT_RANGE = range;
+    XMIN=-range; XMAX=range; YMIN=-range; YMAX=range;
+    trajectories = [];
+    rebuildParamSliders(defaults);
+  }
+
+  document.getElementById('presetPendulum').addEventListener('click', () => {
+    setSystem('y', '-sin(x) - a*y', 'a', {a:0.2}, 8);
+    addTrajectory(2,0); addTrajectory(-3,1); addTrajectory(0,4);
+  });
+  document.getElementById('presetVdP').addEventListener('click', () => {
+    setSystem('y', 'a*(1 - x^2)*y - x', 'a', {a:1.0}, 5);
+    addTrajectory(0.5,0); addTrajectory(3,3); addTrajectory(-2,-2);
+  });
+  document.getElementById('presetLV').addEventListener('click', () => {
+    setSystem('a*x - x*y', 'x*y - b*y', 'a, b', {a:1.0, b:1.0}, 6);
+    addTrajectory(2,2); addTrajectory(4,1); addTrajectory(1,3);
+  });
+  document.getElementById('presetSHO').addEventListener('click', () => {
+    setSystem('y', '-a*x - b*y', 'a, b', {a:1.0, b:0.1}, 5);
+    addTrajectory(2,0); addTrajectory(0,3); addTrajectory(-3,-1);
+  });
+
+  document.getElementById('runBtn').addEventListener('click', () => {
+    addTrajectory(parseFloat(x0In.value), parseFloat(y0In.value));
+  });
+  document.getElementById('clearBtn').addEventListener('click', () => {
+    trajectories = [];
+    draw();
+  });
+  document.getElementById('resetViewBtn').addEventListener('click', () => {
+    XMIN=-DEFAULT_RANGE; XMAX=DEFAULT_RANGE; YMIN=-DEFAULT_RANGE; YMAX=DEFAULT_RANGE;
+    draw();
+  });
+
+  dxIn.addEventListener('change', draw);
+  dyIn.addEventListener('change', draw);
+
+  // ---- Pan (drag) and zoom (wheel) ----
+  let isDragging = false;
+  let dragStart = null;
+  let didDrag = false;
+  let viewAtDragStart = null;
+
+  canvas.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    didDrag = false;
+    const r = canvas.getBoundingClientRect();
+    dragStart = { x: e.clientX - r.left, y: e.clientY - r.top };
+    viewAtDragStart = { XMIN, XMAX, YMIN, YMAX };
+    canvas.style.cursor = 'grabbing';
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if(!isDragging) return;
+    const r = canvas.getBoundingClientRect();
+    const px = e.clientX - r.left, py = e.clientY - r.top;
+    const dpx = px - dragStart.x, dpy = py - dragStart.y;
+    if(Math.abs(dpx) > 3 || Math.abs(dpy) > 3) didDrag = true;
+    if(!didDrag) return;
+    const rangeX = viewAtDragStart.XMAX - viewAtDragStart.XMIN;
+    const rangeY = viewAtDragStart.YMAX - viewAtDragStart.YMIN;
+    const ddx = -dpx/canvas.width*rangeX;
+    const ddy = dpy/canvas.height*rangeY;
+    XMIN = viewAtDragStart.XMIN + ddx; XMAX = viewAtDragStart.XMAX + ddx;
+    YMIN = viewAtDragStart.YMIN + ddy; YMAX = viewAtDragStart.YMAX + ddy;
+    draw();
+  });
+
+  window.addEventListener('mouseup', (e) => {
+    if(!isDragging) return;
+    isDragging = false;
+    canvas.style.cursor = 'grab';
+    if(!didDrag){
+      const r = canvas.getBoundingClientRect();
+      const px = e.clientX - r.left, py = e.clientY - r.top;
+      if(px>=0 && px<=canvas.width && py>=0 && py<=canvas.height){
+        addTrajectory(invX(px), invY(py));
+      }
+    }
+  });
+
+  canvas.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    const r = canvas.getBoundingClientRect();
+    const px = e.clientX - r.left, py = e.clientY - r.top;
+    const cx = invX(px), cy = invY(py);
+    const zoom = e.deltaY > 0 ? 1.15 : 1/1.15;
+    XMIN = cx + (XMIN-cx)*zoom;
+    XMAX = cx + (XMAX-cx)*zoom;
+    YMIN = cy + (YMIN-cy)*zoom;
+    YMAX = cy + (YMAX-cy)*zoom;
+    draw();
+  }, { passive: false });
+
+  resize();
+  rebuildParamSliders({a:0.2});
+  addTrajectory(2,0);
+})();
+</script>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
