@@ -25,6 +25,8 @@ website:
         text: CV
       - href: postcards.qmd
         text: Postcards
+      - href: phase-plane.qmd
+        text: Phase Plane Explorer
     right:
       - icon: github
         href: https://github.com/emgonzher
