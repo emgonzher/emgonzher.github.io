@@ -4,7 +4,7 @@ toc: false
 page-layout: full
 ---
 
-The PhD-friends postcards collection!
+A collection of postcards from around the world.
 
 ```{=html}
 <div id="postcard-gallery">
