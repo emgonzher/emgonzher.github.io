@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://emgonzher.github.io/research.html</loc>
-    <lastmod>2026-07-14T08:42:41.072Z</lastmod>
-  </url>
-  <url>
-    <loc>https://emgonzher.github.io/index.html</loc>
-    <lastmod>2026-07-14T08:42:40.838Z</lastmod>
+    <loc>https://emgonzher.github.io/code/spectral-analysis.html</loc>
+    <lastmod>2026-07-21T09:55:05.627Z</lastmod>
   </url>
   <url>
     <loc>https://emgonzher.github.io/code_template.html</loc>
-    <lastmod>2026-07-14T08:42:40.705Z</lastmod>
+    <lastmod>2026-07-21T09:55:05.627Z</lastmod>
   </url>
   <url>
-    <loc>https://emgonzher.github.io/postcards.html</loc>
-    <lastmod>2026-07-14T08:42:40.838Z</lastmod>
+    <loc>https://emgonzher.github.io/postcards_arrows.html</loc>
+    <lastmod>2026-07-21T09:55:06.037Z</lastmod>
   </url>
   <url>
     <loc>https://emgonzher.github.io/cv.html</loc>
-    <lastmod>2026-07-14T08:42:40.705Z</lastmod>
+    <lastmod>2026-07-21T09:55:05.627Z</lastmod>
   </url>
   <url>
     <loc>https://emgonzher.github.io/code.html</loc>
-    <lastmod>2026-07-14T08:42:40.705Z</lastmod>
+    <lastmod>2026-07-21T09:55:05.627Z</lastmod>
   </url>
   <url>
-    <loc>https://emgonzher.github.io/code/spectral-analysis.html</loc>
-    <lastmod>2026-07-14T08:42:40.705Z</lastmod>
+    <loc>https://emgonzher.github.io/research.html</loc>
+    <lastmod>2026-07-21T09:55:06.037Z</lastmod>
+  </url>
+  <url>
+    <loc>https://emgonzher.github.io/postcards.html</loc>
+    <lastmod>2026-07-21T09:55:05.776Z</lastmod>
+  </url>
+  <url>
+    <loc>https://emgonzher.github.io/index.html</loc>
+    <lastmod>2026-07-21T09:55:05.776Z</lastmod>
   </url>
 </urlset>

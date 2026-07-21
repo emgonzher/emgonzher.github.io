@@ -1,45 +1,38 @@
 [
   {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Research",
+    "objectID": "code/spectral-analysis.html",
+    "href": "code/spectral-analysis.html",
+    "title": "Spectral Analysis of Turbulence",
     "section": "",
-    "text": "My research focuses on flows through collapsible channels: problems in which a fluid interacts nonlinearly with an elastic solid. I am mainly interested in the numerical modelling of these systems, aiming to capture their dynamical behaviour, study the effect of system parameters, and characterise the physical phenomena that emerge.\n\n\nDynamical Anlysis of Collapsible Channels with Hyperelastic Walls (2026)\nSupervisors: Prof. Alfonso Miguel Gañán Calvo, Prof. Miguel Ángel Herrada Gutierrez — University of Sevilla\nAbstract: We present a numerical study of collapsible channels with different geometries. We analyse and characterise families of steady solutions and investigate their linear stability under variations in physical parameters. The computations are carried out using JaM, a numerical framework based on the use of analytical Jacobians and sparse collocation matrices, which allows the modelling of fluid–solid interaction problems under large deformations.\nDownload PDF Browse HTML version\n\n\n\n\n\n\nNoteComing soon (hopefully)\n\n\n\nInteractive HTML version built with Quarto — providing browsable chapters with embedded figures and code."
+    "text": "In turbulent flows, the energy spectrum E(k) describes how kinetic energy is distributed across different length scales. For homogeneous isotropic turbulence, Kolmogorov’s theory predicts a k^{-5/3} scaling in the inertial subrange:\n\nE(k) = C_K \\varepsilon^{2/3} k^{-5/3}\n\nwhere C_K \\approx 1.5 is the Kolmogorov constant, \\varepsilon is the dissipation rate, and k is the wavenumber."
   },
   {
-    "objectID": "research.html#research-interests",
-    "href": "research.html#research-interests",
-    "title": "Research",
+    "objectID": "code/spectral-analysis.html#introduction",
+    "href": "code/spectral-analysis.html#introduction",
+    "title": "Spectral Analysis of Turbulence",
     "section": "",
-    "text": "My research focuses on flows through collapsible channels: problems in which a fluid interacts nonlinearly with an elastic solid. I am mainly interested in the numerical modelling of these systems, aiming to capture their dynamical behaviour, study the effect of system parameters, and characterise the physical phenomena that emerge.\n\n\nDynamical Anlysis of Collapsible Channels with Hyperelastic Walls (2026)\nSupervisors: Prof. Alfonso Miguel Gañán Calvo, Prof. Miguel Ángel Herrada Gutierrez — University of Sevilla\nAbstract: We present a numerical study of collapsible channels with different geometries. We analyse and characterise families of steady solutions and investigate their linear stability under variations in physical parameters. The computations are carried out using JaM, a numerical framework based on the use of analytical Jacobians and sparse collocation matrices, which allows the modelling of fluid–solid interaction problems under large deformations.\nDownload PDF Browse HTML version\n\n\n\n\n\n\nNoteComing soon (hopefully)\n\n\n\nInteractive HTML version built with Quarto — providing browsable chapters with embedded figures and code."
+    "text": "In turbulent flows, the energy spectrum E(k) describes how kinetic energy is distributed across different length scales. For homogeneous isotropic turbulence, Kolmogorov’s theory predicts a k^{-5/3} scaling in the inertial subrange:\n\nE(k) = C_K \\varepsilon^{2/3} k^{-5/3}\n\nwhere C_K \\approx 1.5 is the Kolmogorov constant, \\varepsilon is the dissipation rate, and k is the wavenumber."
   },
   {
-    "objectID": "research.html#publications",
-    "href": "research.html#publications",
-    "title": "Research",
-    "section": "Publications",
-    "text": "Publications\n\nJournal articles\n\nE. G. Herrer, M. A. Herrada., A. M. Gañán-Calvo, P. S. Stewart. Stability of finite-length collapsible channel flow to spanwise perturbations. Physic of Fluids, 36, 124105 (2024).\n[PDF] [DOI]"
+    "objectID": "code/spectral-analysis.html#matlab-implementation",
+    "href": "code/spectral-analysis.html#matlab-implementation",
+    "title": "Spectral Analysis of Turbulence",
+    "section": "MATLAB Implementation",
+    "text": "MATLAB Implementation\n\n\n\n\n\n\nNote\n\n\n\nMATLAB code is shown with syntax highlighting. Figures are pre-rendered from MATLAB and included as images. The full scripts are available in the GitHub repository.\n\n\n\nLoading and preprocessing DNS data\n%% Load DNS velocity field\n% Data from a 256^3 simulation at Re_lambda = 100\nload('dns_velocity_field.mat', 'u', 'v', 'w', 'Lx', 'Ly', 'Lz')\n\n[Nx, Ny, Nz] = size(u);\ndx = Lx / Nx;\n\nfprintf('Grid: %d x %d x %d\\n', Nx, Ny, Nz)\nfprintf('Domain: %.2f x %.2f x %.2f\\n', Lx, Ly, Lz)\nfprintf('Resolution: dx = %.4f\\n', dx)\n\n\nComputing the 3D energy spectrum\n%% Compute 3D energy spectrum using FFT\n% Fourier transform of velocity components\nu_hat = fftn(u) / (Nx * Ny * Nz);\nv_hat = fftn(v) / (Nx * Ny * Nz);\nw_hat = fftn(w) / (Nx * Ny * Nz);\n\n% Energy in Fourier space\nE_hat = 0.5 * (abs(u_hat).^2 + abs(v_hat).^2 + abs(w_hat).^2);\n\n% Wavenumber grid\nkx = [0:Nx/2-1, -Nx/2:-1] * (2*pi/Lx);\nky = [0:Ny/2-1, -Ny/2:-1] * (2*pi/Ly);\nkz = [0:Nz/2-1, -Nz/2:-1] * (2*pi/Lz);\n[KX, KY, KZ] = meshgrid(kx, ky, kz);\nK_mag = sqrt(KX.^2 + KY.^2 + KZ.^2);\n\n% Shell-averaged spectrum\nk_max = floor(Nx/2);\nk_shells = 1:k_max;\nE_k = zeros(size(k_shells));\n\nfor i = 1:length(k_shells)\n    shell = (K_mag &gt;= k_shells(i) - 0.5) & (K_mag &lt; k_shells(i) + 0.5);\n    E_k(i) = sum(E_hat(shell), 'all');\nend\n\n\nResult\nThe computed energy spectrum shows excellent agreement with the k^{-5/3} scaling in the inertial subrange:\n\n\n\n\n\n\n\n\n\nTipPlaceholder\n\n\n\nReplace the image path above with your actual MATLAB figure. Export from MATLAB with:\nexportgraphics(gcf, 'images/energy_spectrum.png', 'Resolution', 300)\n\n\n\n\nCompensated spectrum\nTo better identify the inertial range, we plot the compensated spectrum E(k) \\cdot k^{5/3} \\cdot \\varepsilon^{-2/3}:\n%% Compensated spectrum\nepsilon = 2 * nu * sum(k_shells.^2 .* E_k);  % dissipation rate\nE_compensated = E_k .* k_shells.^(5/3) .* epsilon^(-2/3);\n\nfigure('Position', [100 100 600 400])\nsemilogx(k_shells, E_compensated, 'b-', 'LineWidth', 1.5)\nhold on\nyline(1.5, 'r--', 'C_K = 1.5', 'LineWidth', 1.2)\nxlabel('k')\nylabel('E(k) k^{5/3} \\epsilon^{-2/3}')\ntitle('Compensated Energy Spectrum')\ngrid on\nset(gca, 'FontSize', 12)\nexportgraphics(gcf, 'images/compensated_spectrum.png', 'Resolution', 300)"
   },
   {
-    "objectID": "research.html#talks-presentations",
-    "href": "research.html#talks-presentations",
-    "title": "Research",
-    "section": "Talks & Presentations",
-    "text": "Talks & Presentations\n\n\n\nDate\nEvent\nTitle\nMaterials\n\n\n\n\nNov 2025\nInformal Applied, University of Manchester\nWrinkles to Drapes in Elastic Discs\nSlides\n\n\nNov 2024\nEuro Mech, University of Aachen\nStability of a finite-length collapsible channel flow to spanwise perturbations\nPoster\n\n\nJul 2024\nSeminar, IIT-Bombay\nAdvances in Smart Air Sensing & Emerging Control Technologies\nSlides"
+    "objectID": "code/spectral-analysis.html#key-findings",
+    "href": "code/spectral-analysis.html#key-findings",
+    "title": "Spectral Analysis of Turbulence",
+    "section": "Key findings",
+    "text": "Key findings\nThe analysis confirms:\n\nThe k^{-5/3} scaling spans approximately one decade in wavenumber space (10 \\leq k \\leq 100)\nThe Kolmogorov constant C_K \\approx 1.52, consistent with literature values\nThe dissipation range onset occurs at k\\eta \\approx 0.1, where \\eta is the Kolmogorov length scale"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Emiliano G. Herrer",
-    "section": "",
-    "text": "I am a PhD candidate (currently finishing!) in Fluid Mechanics at University of Sevilla, working on computational fluid dynamics (CFD) with applications in fluid-solid interaction problems.\nMore specifically, my research focus on the numerical modelling of flows through collapsible channels, using different software as Matlab, Julia and C++ to perform different kind of simulations. Check my code section to take a look to some examples of what I do!\nI am passionate about open-source scientific computing, reproducible research, and making CFD tools accessible to the community.\nInterests: CFD, Flud Mechanics, Elasticity, Scientific Computing\nContact: emiherrer@gmail.com"
-  },
-  {
-    "objectID": "index.html#about-me",
-    "href": "index.html#about-me",
-    "title": "Emiliano G. Herrer",
-    "section": "",
-    "text": "I am a PhD candidate (currently finishing!) in Fluid Mechanics at University of Sevilla, working on computational fluid dynamics (CFD) with applications in fluid-solid interaction problems.\nMore specifically, my research focus on the numerical modelling of flows through collapsible channels, using different software as Matlab, Julia and C++ to perform different kind of simulations. Check my code section to take a look to some examples of what I do!\nI am passionate about open-source scientific computing, reproducible research, and making CFD tools accessible to the community.\nInterests: CFD, Flud Mechanics, Elasticity, Scientific Computing\nContact: emiherrer@gmail.com"
+    "objectID": "code/spectral-analysis.html#references",
+    "href": "code/spectral-analysis.html#references",
+    "title": "Spectral Analysis of Turbulence",
+    "section": "References",
+    "text": "References\n\nPope, S. B. (2000). Turbulent Flows. Cambridge University Press.\nIshihara, T., Gotoh, T., & Kaneda, Y. (2009). Study of high-Reynolds number isotropic turbulence by direct numerical simulation. Annual Review of Fluid Mechanics, 41, 165–180."
   },
   {
     "objectID": "code_template.html",
@@ -63,11 +56,11 @@
     "text": "Notebooks & Tutorials\nThese are interactive computational notebooks showcasing specific analyses and methods. Built with Quarto — code and results side by side.\n\n\n\nTopic\nLanguage\nDescription\n\n\n\n\nLid-driven cavity benchmark\nJulia\nValidation of my solver against benchmark data\n\n\nSpectral analysis of turbulence\nMATLAB\nComputing energy spectra from DNS data\n\n\nMesh convergence study\nJulia\nGrid independence analysis for channel flow\n\n\n\n\n\n\n\n\n\nTipReproducibility\n\n\n\nAll notebooks include the complete code to reproduce the results. Clone the repository and run them locally with Quarto."
   },
   {
-    "objectID": "postcards.html",
-    "href": "postcards.html",
+    "objectID": "postcards_arrows.html",
+    "href": "postcards_arrows.html",
     "title": "Postcards",
     "section": "",
-    "text": "The PhD-friends postcards collection!\n\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n\n\n\n\n  ×"
+    "text": "A collection of postcards from around the world.\n\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n\n\n\n\n  ×\n  ❮\n  \n  ❯"
   },
   {
     "objectID": "cv.html",
@@ -133,38 +126,52 @@
     "text": "Solvers & Libraries\n\nCollapsible channels & tubes\n\n\n\n\n\n\nNoteComing soon (hopefully)\n\n\n\nAcces to updated git-hub repository with examples and tutorials\n\n\n\n\nSolid Mechanics\n\n\n\n\n\n\nNoteComing soon (hopefully)\n\n\n\nAcces to updated git-hub repository with examples and tutorials"
   },
   {
-    "objectID": "code/spectral-analysis.html",
-    "href": "code/spectral-analysis.html",
-    "title": "Spectral Analysis of Turbulence",
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
     "section": "",
-    "text": "In turbulent flows, the energy spectrum E(k) describes how kinetic energy is distributed across different length scales. For homogeneous isotropic turbulence, Kolmogorov’s theory predicts a k^{-5/3} scaling in the inertial subrange:\n\nE(k) = C_K \\varepsilon^{2/3} k^{-5/3}\n\nwhere C_K \\approx 1.5 is the Kolmogorov constant, \\varepsilon is the dissipation rate, and k is the wavenumber."
+    "text": "My research focuses on flows through collapsible channels: problems in which a fluid interacts nonlinearly with an elastic solid. I am mainly interested in the numerical modelling of these systems, aiming to capture their dynamical behaviour, study the effect of system parameters, and characterise the physical phenomena that emerge.\n\n\nDynamical Anlysis of Collapsible Channels with Hyperelastic Walls (2026)\nSupervisors: Prof. Alfonso Miguel Gañán Calvo, Prof. Miguel Ángel Herrada Gutierrez — University of Sevilla\nAbstract: We present a numerical study of collapsible channels with different geometries. We analyse and characterise families of steady solutions and investigate their linear stability under variations in physical parameters. The computations are carried out using JaM, a numerical framework based on the use of analytical Jacobians and sparse collocation matrices, which allows the modelling of fluid–solid interaction problems under large deformations.\nDownload PDF Browse HTML version\n\n\n\n\n\n\nNoteComing soon (hopefully)\n\n\n\nInteractive HTML version built with Quarto — providing browsable chapters with embedded figures and code."
   },
   {
-    "objectID": "code/spectral-analysis.html#introduction",
-    "href": "code/spectral-analysis.html#introduction",
-    "title": "Spectral Analysis of Turbulence",
+    "objectID": "research.html#research-interests",
+    "href": "research.html#research-interests",
+    "title": "Research",
     "section": "",
-    "text": "In turbulent flows, the energy spectrum E(k) describes how kinetic energy is distributed across different length scales. For homogeneous isotropic turbulence, Kolmogorov’s theory predicts a k^{-5/3} scaling in the inertial subrange:\n\nE(k) = C_K \\varepsilon^{2/3} k^{-5/3}\n\nwhere C_K \\approx 1.5 is the Kolmogorov constant, \\varepsilon is the dissipation rate, and k is the wavenumber."
+    "text": "My research focuses on flows through collapsible channels: problems in which a fluid interacts nonlinearly with an elastic solid. I am mainly interested in the numerical modelling of these systems, aiming to capture their dynamical behaviour, study the effect of system parameters, and characterise the physical phenomena that emerge.\n\n\nDynamical Anlysis of Collapsible Channels with Hyperelastic Walls (2026)\nSupervisors: Prof. Alfonso Miguel Gañán Calvo, Prof. Miguel Ángel Herrada Gutierrez — University of Sevilla\nAbstract: We present a numerical study of collapsible channels with different geometries. We analyse and characterise families of steady solutions and investigate their linear stability under variations in physical parameters. The computations are carried out using JaM, a numerical framework based on the use of analytical Jacobians and sparse collocation matrices, which allows the modelling of fluid–solid interaction problems under large deformations.\nDownload PDF Browse HTML version\n\n\n\n\n\n\nNoteComing soon (hopefully)\n\n\n\nInteractive HTML version built with Quarto — providing browsable chapters with embedded figures and code."
   },
   {
-    "objectID": "code/spectral-analysis.html#matlab-implementation",
-    "href": "code/spectral-analysis.html#matlab-implementation",
-    "title": "Spectral Analysis of Turbulence",
-    "section": "MATLAB Implementation",
-    "text": "MATLAB Implementation\n\n\n\n\n\n\nNote\n\n\n\nMATLAB code is shown with syntax highlighting. Figures are pre-rendered from MATLAB and included as images. The full scripts are available in the GitHub repository.\n\n\n\nLoading and preprocessing DNS data\n%% Load DNS velocity field\n% Data from a 256^3 simulation at Re_lambda = 100\nload('dns_velocity_field.mat', 'u', 'v', 'w', 'Lx', 'Ly', 'Lz')\n\n[Nx, Ny, Nz] = size(u);\ndx = Lx / Nx;\n\nfprintf('Grid: %d x %d x %d\\n', Nx, Ny, Nz)\nfprintf('Domain: %.2f x %.2f x %.2f\\n', Lx, Ly, Lz)\nfprintf('Resolution: dx = %.4f\\n', dx)\n\n\nComputing the 3D energy spectrum\n%% Compute 3D energy spectrum using FFT\n% Fourier transform of velocity components\nu_hat = fftn(u) / (Nx * Ny * Nz);\nv_hat = fftn(v) / (Nx * Ny * Nz);\nw_hat = fftn(w) / (Nx * Ny * Nz);\n\n% Energy in Fourier space\nE_hat = 0.5 * (abs(u_hat).^2 + abs(v_hat).^2 + abs(w_hat).^2);\n\n% Wavenumber grid\nkx = [0:Nx/2-1, -Nx/2:-1] * (2*pi/Lx);\nky = [0:Ny/2-1, -Ny/2:-1] * (2*pi/Ly);\nkz = [0:Nz/2-1, -Nz/2:-1] * (2*pi/Lz);\n[KX, KY, KZ] = meshgrid(kx, ky, kz);\nK_mag = sqrt(KX.^2 + KY.^2 + KZ.^2);\n\n% Shell-averaged spectrum\nk_max = floor(Nx/2);\nk_shells = 1:k_max;\nE_k = zeros(size(k_shells));\n\nfor i = 1:length(k_shells)\n    shell = (K_mag &gt;= k_shells(i) - 0.5) & (K_mag &lt; k_shells(i) + 0.5);\n    E_k(i) = sum(E_hat(shell), 'all');\nend\n\n\nResult\nThe computed energy spectrum shows excellent agreement with the k^{-5/3} scaling in the inertial subrange:\n\n\n\n\n\n\n\n\n\nTipPlaceholder\n\n\n\nReplace the image path above with your actual MATLAB figure. Export from MATLAB with:\nexportgraphics(gcf, 'images/energy_spectrum.png', 'Resolution', 300)\n\n\n\n\nCompensated spectrum\nTo better identify the inertial range, we plot the compensated spectrum E(k) \\cdot k^{5/3} \\cdot \\varepsilon^{-2/3}:\n%% Compensated spectrum\nepsilon = 2 * nu * sum(k_shells.^2 .* E_k);  % dissipation rate\nE_compensated = E_k .* k_shells.^(5/3) .* epsilon^(-2/3);\n\nfigure('Position', [100 100 600 400])\nsemilogx(k_shells, E_compensated, 'b-', 'LineWidth', 1.5)\nhold on\nyline(1.5, 'r--', 'C_K = 1.5', 'LineWidth', 1.2)\nxlabel('k')\nylabel('E(k) k^{5/3} \\epsilon^{-2/3}')\ntitle('Compensated Energy Spectrum')\ngrid on\nset(gca, 'FontSize', 12)\nexportgraphics(gcf, 'images/compensated_spectrum.png', 'Resolution', 300)"
+    "objectID": "research.html#publications",
+    "href": "research.html#publications",
+    "title": "Research",
+    "section": "Publications",
+    "text": "Publications\n\nJournal articles\n\nE. G. Herrer, M. A. Herrada., A. M. Gañán-Calvo, P. S. Stewart. Stability of finite-length collapsible channel flow to spanwise perturbations. Physic of Fluids, 36, 124105 (2024).\n[PDF] [DOI]"
   },
   {
-    "objectID": "code/spectral-analysis.html#key-findings",
-    "href": "code/spectral-analysis.html#key-findings",
-    "title": "Spectral Analysis of Turbulence",
-    "section": "Key findings",
-    "text": "Key findings\nThe analysis confirms:\n\nThe k^{-5/3} scaling spans approximately one decade in wavenumber space (10 \\leq k \\leq 100)\nThe Kolmogorov constant C_K \\approx 1.52, consistent with literature values\nThe dissipation range onset occurs at k\\eta \\approx 0.1, where \\eta is the Kolmogorov length scale"
+    "objectID": "research.html#talks-presentations",
+    "href": "research.html#talks-presentations",
+    "title": "Research",
+    "section": "Talks & Presentations",
+    "text": "Talks & Presentations\n\n\n\nDate\nEvent\nTitle\nMaterials\n\n\n\n\nNov 2025\nInformal Applied, University of Manchester\nWrinkles to Drapes in Elastic Discs\nSlides\n\n\nNov 2024\nEuro Mech, University of Aachen\nStability of a finite-length collapsible channel flow to spanwise perturbations\nPoster\n\n\nJul 2024\nSeminar, IIT-Bombay\nAdvances in Smart Air Sensing & Emerging Control Technologies\nSlides"
   },
   {
-    "objectID": "code/spectral-analysis.html#references",
-    "href": "code/spectral-analysis.html#references",
-    "title": "Spectral Analysis of Turbulence",
-    "section": "References",
-    "text": "References\n\nPope, S. B. (2000). Turbulent Flows. Cambridge University Press.\nIshihara, T., Gotoh, T., & Kaneda, Y. (2009). Study of high-Reynolds number isotropic turbulence by direct numerical simulation. Annual Review of Fluid Mechanics, 41, 165–180."
+    "objectID": "postcards.html",
+    "href": "postcards.html",
+    "title": "Postcards",
+    "section": "",
+    "text": "The PhD-friends postcards collection!\n\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n\n\n\n\n  ×\n  ❮\n  \n  ❯"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Emiliano G. Herrer",
+    "section": "",
+    "text": "I am a PhD candidate (currently finishing!) in Fluid Mechanics at University of Sevilla, working on computational fluid dynamics (CFD) with applications in fluid-solid interaction problems.\nMore specifically, my research focus on the numerical modelling of flows through collapsible channels, using different software as Matlab, Julia and C++ to perform different kind of simulations. Check my code section to take a look to some examples of what I do!\nI am passionate about open-source scientific computing, reproducible research, and making CFD tools accessible to the community.\nInterests: CFD, Flud Mechanics, Elasticity, Scientific Computing\nContact: emiherrer@gmail.com"
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Emiliano G. Herrer",
+    "section": "",
+    "text": "I am a PhD candidate (currently finishing!) in Fluid Mechanics at University of Sevilla, working on computational fluid dynamics (CFD) with applications in fluid-solid interaction problems.\nMore specifically, my research focus on the numerical modelling of flows through collapsible channels, using different software as Matlab, Julia and C++ to perform different kind of simulations. Check my code section to take a look to some examples of what I do!\nI am passionate about open-source scientific computing, reproducible research, and making CFD tools accessible to the community.\nInterests: CFD, Flud Mechanics, Elasticity, Scientific Computing\nContact: emiherrer@gmail.com"
   }
 ]
