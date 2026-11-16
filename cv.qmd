@@ -3,61 +3,76 @@ title: "Curriculum Vitae"
 toc: true
 ---
 
-[Download CV as PDF](cv/cv.pdf){.btn .btn-primary}
+**Emiliano G. Herrer**  
+Seville, Spain · [emiherrer@gmail.com](mailto:emiherrer@gmail.com) · [emgonzher.github.io](https://emgonzher.github.io/)
 
-Last updated: May 2026
+<!-- Uncomment in case we later want to allow CV download button -->
+
+<!-- [Download CV as PDF](cv/classicCV.pdf){.btn .btn-primary} -->
+ 
+
+*Last updated: 16 November 2026*
 
 ---
 
+## Research Interests
+
+Fluid–structure interaction, collapsible-channel and collapsible-tube flows,
+hydrodynamic stability, nonlinear dynamics and numerical methods for fluid mechanics.
+
 ## Education
 
-**PhD in Fluid Mechanics** — University of Sevilla  
-*2021 – present*  
-Thesis: *Dynamical Analysis of Collapsible Channels* 
+**PhD in Fluid Mechanics** — University of Sevilla, Department of Fluid Mechanics and Aerospace Engineering  
+*2021–present*  
+Thesis: *Dynamical Analysis of Collapsible Channels with Hyperelastic Walls*
 
-Supervisors:  Prof. [Miguel Ángel Herrada Gutierrez](https://edwww.us.es/trabaja-en-la-us/directorio/miguel-angel-herrada-gutierrez), Prof. [Alfonso Miguel Gañán Calvo](https://edwww.us.es/trabaja-en-la-us/directorio/alfonso-miguel-ganan-calvo)
+Supervisors: Prof. [Miguel Ángel Herrada Gutiérrez](https://edwww.us.es/trabaja-en-la-us/directorio/miguel-angel-herrada-gutierrez), Prof. [Alfonso Miguel Gañán Calvo](https://edwww.us.es/trabaja-en-la-us/directorio/alfonso-miguel-ganan-calvo)
 
 **MSc in Physics and Mathematics** — University of Granada  
-*2020 – 2022*  
-Thesis: *Modulation of S-waves in an elastic medium: slow-variable approximation and characterization of the amplitude through a nonlinear Schrödinger equation*
+*2020–2021*
 
-**BSc in Physics** — University Complutense of Madrid  
-*2014– 2019*
+**Master's Degree in Secondary Education Teaching** — Complutense University of Madrid  
+*2021–2022*
 
+**BSc in Physics** — Complutense University of Madrid  
+*2014–2019*
 
-## Research experience
+## Research Experience
 
-**Doctoral Researcher** — University of Sevilla Lab Name  
-*2022 – 2026*  
-Numerical modelling of collapsible channels and tubes using [JaM](https://miguelherrada.github.io/JAM/index.html)
+**Doctoral Researcher** — University of Sevilla, Department of Fluid Mechanics and Aerospace Engineering  
+*2021–2026*  
+Numerical investigation of steady solutions and hydrodynamic stability in collapsible-channel and collapsible-tube flows, using [JaM](https://miguelherrada.github.io/JAM/index.html) for coupled fluid–structure interaction problems.  
+Funded by a [Spanish State Research Agency (AEI) predoctoral fellowship](https://www.aei.gob.es/convocatorias/buscador-convocatorias/ayudas-contratos-predoctorales-formacion-doctores-2020-2), awarded in 2021.
 
-**Visiting Student** — University of Manchester
+**Visiting Student** — University of Manchester, Department of Mathematics  
 *Summer 2025*  
-Worked on modelling of wrinkles and drapes on elastic disks using [oomph-lib](https://oomph-lib.github.io/oomph-lib/doc/html/index.html)
+Numerical modelling of wrinkling and draping in elastic disks using [oomph-lib](https://oomph-lib.github.io/oomph-lib/doc/html/index.html).
 
-## Skills
+## Publications & Manuscripts
 
-**Programming:** MATLAB, Julia, Fortran (basic), C++ (basic)
+**2024** — **E. G. Herrer**, M. A. Herrada, A. M. Gañán-Calvo and P. S. Stewart. *Stability of finite-length collapsible channel flow to spanwise perturbations*. *Physics of Fluids*, **36**, 124105 (2024). [DOI](https://doi.org/10.1063/5.0237604).
 
-**Visualization:** ParaView  
+**Under review** — **E. G. Herrer**, M. A. Herrada and A. M. Gañán-Calvo. *Global stability analysis of axisymmetric flow in a collapsible tube*. Revised manuscript submitted to *Physics of Fluids*; awaiting editorial decision.
 
-**Other:** LaTeX, Git, Linux
+## Selected Talks & Presentations
 
+**Nov 2024** — *Stability of a finite-length collapsible channel flow to spanwise perturbations*. EuroMech, University of Aachen.
 
-## Languages
+**Jul 2024** — *Fluid–solid interaction model in collapsible channels and potential applications to filtering systems*. Seminar, IIT Bombay.
 
-- Spanish — Native
-- English — Fluent 
-- French — Basic 
+## Teaching Experience
 
+**Temporary Lecturer** — University of Sevilla, Department of Applied Mathematics II  
+*2026–present*  
+Teaching algebra to first-year engineering students
 
-## Publications
+## Skills & Languages
 
-See the [Research](research.qmd) page for a complete list.
+**Programming:** MATLAB, Julia; basic knowledge of Fortran and C++.
 
+**Tools:** ParaView, LaTeX, Git, Linux.
 
-## Awards & Grants
+**Languages:** Spanish (native), English (advanced), French (elementary).
 
-- **2022** — PhD fellowship, [Agencia Estatal de Investigación](https://www.aei.gob.es/convocatorias/buscador-convocatorias/ayudas-contratos-predoctorales-formacion-doctores-2020-2)
 
 

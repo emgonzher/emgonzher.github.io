@@ -12,11 +12,11 @@ toc: false
 
 I am a PhD candidate (currently finishing!) in **Fluid Mechanics** at [University of Sevilla](https://www.us.es/), working on computational fluid dynamics (CFD) with applications in fluid-solid interaction problems.
 
-More specifically, my research focus on the numerical modelling of flows through collapsible channels, using different software as Matlab, Julia and C++ to perform different kind of simulations. Check my [code](code.qmd) section to take a look to some examples of what I do!
+More specifically, my research focus on the numerical modelling of flows through collapsible channels, using [JaM](https://miguelherrada.github.io/JAM/index.html) framework to perform different kind of simulations. Check my [research](research.qmd) section to take a look to some examples of what I do!
 
-I am passionate about open-source scientific computing, reproducible research,  and making CFD tools accessible to the community.
+Beyond my research in fluid mechanics, I am interested in open-source scientific computing and reproducible research, particularly in making numerical methods and CFD tools more accessible to the wider scientific community
 
-**Interests:** CFD, Flud Mechanics, Elasticity, Scientific Computing
+**Interests:** Fluid–structure interaction, hydrodynamic stability, CFD, scientific computing.
 
 **Contact:** [emiherrer@gmail.com](mailto:emiherrer@gmail.com)
 :::
